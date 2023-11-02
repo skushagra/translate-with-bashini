@@ -1,10 +1,8 @@
-// // --------------API URL----------------
-// // used one of the API's of my fellow student
-// // Project Repo: https://github.com/AbhinavGupta-de/Bhashini_Project
-const API_URL = "https://bhashiniproject.up.railway.app/translate";
+const API_URL = "https://bashiniapi-production.up.railway.app/scaler/translate";
 
 // integer reference of the languages as per the api documentation
 const LANG = {
+    "English": 1,
 	"Hindi": 2,
 	"Bengali": 3,
     "Gujarati": 4,
@@ -55,8 +53,8 @@ $('#writer').on('input', function() {
         document.getElementById("viewer").innerText = data.translated_content;
     })
     .catch((error) => {
-        console.error("Error:", error);
-        alert("An error occurred while translating the text.");
+        // console.error("Error:", error);
+        alert("An error occurred while translating the text." + error);
     });
 
 
