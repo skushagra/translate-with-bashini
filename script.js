@@ -26,7 +26,13 @@ $('#writer').on('input', function() {
 
     if(text == ""){
         document.getElementById("viewer").innerHTML = "";
+	    return;
     }
+
+	if(_to == "English") {
+		alert("Target language cannot be Englsih.")
+		return;
+	}
     
     if(_from == _to){
         alert("Source and target languages cannot be same.");
