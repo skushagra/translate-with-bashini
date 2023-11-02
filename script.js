@@ -26,6 +26,13 @@ $('#writer').on('input', function() {
 
     if(text == ""){
         document.getElementById("viewer").innerHTML = "";
+        return;
+    }
+
+    if(_to == "English") {
+        alert("Target Language cannot be English.");
+        window.location.reload();
+        return;
     }
     
     if(_from == _to){
